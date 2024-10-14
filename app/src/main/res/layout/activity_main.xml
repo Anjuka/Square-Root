@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="@color/purple">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/figtree_bold"
+        android:text="   SQUARE ROOT   "
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:background="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/figtree_regular"
+        android:text="Enter a number for calculation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/light_purple"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/figtree_regular"
+        android:hint="00.00"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textColorHint="@color/purple_50"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:background="@drawable/baseline_auto_fix_high_24"
+        app:layout_constraintStart_toEndOf="@+id/et_input"
+        app:layout_constraintTop_toTopOf="@+id/et_input"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/btn_root"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_back"
+        android:drawableStart="@drawable/squre_root"
+        android:drawableTint="@color/purple"
+        android:padding="10dp"
+        android:text="Square Root"
+        android:textAllCaps="false"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        android:fontFamily="@font/figtree_regular"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pow"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pow"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/btn_pow" />
+
+    <Button
+        android:id="@+id/btn_pow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_back"
+        android:drawableStart="@drawable/pow"
+        android:drawableTint="@color/purple"
+        android:padding="10dp"
+        android:text="Power"
+        android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:textAllCaps="false"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        android:fontFamily="@font/figtree_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_root"
+        app:layout_constraintTop_toBottomOf="@+id/et_input" />
+
+    <TextView
+        android:id="@+id/tv_ans_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Answer"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/light_purple"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        android:fontFamily="@font/figtree_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_root" />
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="32sp"
+        android:visibility="invisible"
+        android:fontFamily="@font/figtree_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ans_head" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
